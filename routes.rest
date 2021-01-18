@@ -1,0 +1,25 @@
+GET http://localhost:5000/funds
+
+###
+GET http://localhost:5000/funds/60058af25cb0932eb872e194
+
+###
+POST http://localhost:5000/funds
+Content-Type: application/json
+
+{
+    "fundName": "hdfc mutual fund",
+    "amtInvested": 23000,
+    "code": 11111
+}
+
+### 
+DELETE http://localhost:5000/funds/60058aaab89d6c2adc24093c
+
+###
+PATCH http://localhost:5000/funds/600587aced880624b858a36f
+Content-Type: application/json
+
+{
+    "fundName": "newfund"
+}
