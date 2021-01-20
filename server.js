@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const axios = require("./axios");
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -18,5 +19,7 @@ app.use(express.json());
 const fundsRouter = require("./routes/funds");
 
 app.use("/funds", fundsRouter);
+
+// app.use("/", axios);
 
 app.listen(5000, () => console.log("server started at port 5000"));
